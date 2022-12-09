@@ -72,6 +72,7 @@ When the server accepts a request, it forwards it to the respective Worker proce
 The client is a multithreaded program that is responsible for opening the *queryFile* and reading it line by line. Each line has a request that the server can accept. For each request the client creates a thread that sends the request to the server. The thread does not connect immidiately to the server after its creation. Once all the threads are created, they all try to connect the server at the same time and send their request. Once the request is sent, each thread prints the response it received from the server to stdout and then can exit. Once all the threads have exited the client can exit too.
 
 ### Usage
+In whoClient folder:
 ```
 ./whoClient –q queryFile -numThreads –sp servPort –sip servIP
 ```
@@ -84,3 +85,13 @@ Parameters
 ## Script
 
 ``` ./create_infiles.sh diseases.txt countries.txt INPUT 5 5 ```
+
+## Compile
+In Disease-Aggregator folder:
+
+```make```
+
+## Clean
+In Disease-Aggregator, whoCLient and whoServer folder:
+
+```make clean```
