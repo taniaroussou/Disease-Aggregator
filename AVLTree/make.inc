@@ -1,0 +1,3 @@
+CFLAGS += -I$(MODULES2)
+
+OBJS += $(MODULES2)/AVL.o
