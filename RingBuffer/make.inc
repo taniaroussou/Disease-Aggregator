@@ -1,0 +1,3 @@
+CFLAGS += -I$(MODULES5)
+
+OBJS += $(MODULES5)/RingBuffer.o
